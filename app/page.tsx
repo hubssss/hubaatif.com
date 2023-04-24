@@ -6,12 +6,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <div className='container px-32 mt-8 lg:pt-20'>
+    <div className='container px-8 lg:px-32 mt-8 lg:pt-20'>
       <Image src={avatar} className='rounded w-28 h-28' alt='Profile Photo' />
       <h1 className='mb-4 mt-4 text-4xl font-extrabold leading-none tracking-wide text-gray-900 md:text-5xl lg:text-6xl dark:text-white'>
-        Hafiza Huba Atif ✨
+        Hafiza Huba Atif
       </h1>
-      <p className='text-lg font-normal text-gray-300 lg:text-xl dark:text-gray-300'>
+      <p className='text-lg font-normal text-gray-300 lg:text-xl dark:text-gray-300 pb-8'>
         I am a computer science student with a passion for digital marketing, SEO, and data science.
         Over the past year, I have gained experience in creating SEO audit reports, conducting
         keyword research, producing SEO-based content, and working as a freelance data scientist on
