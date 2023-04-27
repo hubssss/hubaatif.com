@@ -10,6 +10,9 @@ export default function Home() {
       <Image src={avatar} className='rounded w-28 h-28' alt='Profile Photo' />
       <h1 className='mb-4 mt-4 text-4xl font-extrabold leading-none tracking-wide text-gray-900 md:text-5xl lg:text-6xl dark:text-white'>
         Hafiza Huba Atif
+        <div className='pt-4' style={{ fontSize: '18px' }}>
+          (حافظہ حُبا عاطف)
+        </div>
       </h1>
       <p className='text-lg font-normal text-gray-300 lg:text-xl dark:text-gray-300 pb-8'>
         I am a computer science student with a passion for digital marketing, SEO, and data science.
