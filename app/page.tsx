@@ -105,7 +105,7 @@ export default function Home() {
     },
     {
       question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity. Simple websites take 1-2 weeks, while complex applications can take 4-8 weeks. I'll provide a detailed timeline after understanding your requirements."
+      answer: "Project timelines vary based on complexity. Simple websites take 1-2 weeks, while complex applications can take 4-8 weeks. I&apos;ll provide a detailed timeline after understanding your requirements."
     },
     {
       question: "Do you offer ongoing support?",
@@ -116,8 +116,8 @@ export default function Home() {
       answer: "Absolutely! As a UI/UX designer, I can create complete brand identities, including logos, color schemes, and design systems."
     },
     {
-      question: "What's your development process?",
-      answer: "I follow an agile approach: Discovery → Design → Development → Testing → Launch. You'll be involved at every stage with regular updates."
+      question: "What&apos;s your development process?",
+      answer: "I follow an agile approach: Discovery → Design → Development → Testing → Launch. You&apos;ll be involved at every stage with regular updates."
     }
   ];
 
@@ -303,7 +303,7 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                Hi! I'm <span style={{ color: '#9b59b6' }}>Huba</span>
+                Hi! I&apos;m <span style={{ color: '#9b59b6' }}>Huba</span>
                 <span className="text-3xl md:text-4xl lg:text-5xl block mt-4 font-normal text-gray-300">
                   the mind behind exceptional digital experiences.
                 </span>
@@ -386,7 +386,7 @@ export default function Home() {
                           transition={{ duration: 0.5, ease: 'easeInOut' }}
                         >
                           <p className="text-3xl md:text-4xl font-light text-white">
-                            I'm a Software Engineer
+                            I&apos;m a Software Engineer
                           </p>
                         </motion.div>
                       ) : (
@@ -398,7 +398,7 @@ export default function Home() {
                           transition={{ duration: 0.5, ease: 'easeInOut' }}
                         >
                           <p className="text-3xl md:text-4xl font-light text-white">
-                            I'm a UI/UX Designer
+                            I&apos;m a UI/UX Designer
                           </p>
                         </motion.div>
                       )}
@@ -509,9 +509,9 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Development isn't just <span style={{ color: '#9b59b6' }}>code</span>
+              Development isn&apos;t just <span style={{ color: '#9b59b6' }}>code</span>
             </h2>
-            <p className="text-xl text-gray-400">It's about creating experiences that matter</p>
+            <p className="text-xl text-gray-400">It&apos;s about creating experiences that matter</p>
           </motion.div>
 
           <motion.div 
@@ -769,7 +769,7 @@ export default function Home() {
               Ready to start your <span style={{ color: '#9b59b6' }}>project?</span>
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Let's create something amazing together.
+              Let&apos;s create something amazing together.
             </p>
             <button 
               className="px-12 py-4 text-white rounded-full font-medium text-lg transition-all duration-300 hover:shadow-lg"
