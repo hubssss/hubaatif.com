@@ -2,26 +2,256 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9b59b6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8e44ad;
+}
+
+/* Removed neon effects - keeping classes empty for compatibility */
+.neon-text {}
+.neon-border {}
+.neon-button {}
+.neon-card {}
+.neon-line {}
+.neon-badge {}
+.neon-progress {}
+
+/* Selection styling */
+::selection {
+  background: rgba(155, 89, 182, 0.3);
+  color: #ffffff;
+}
+
+/* Focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #9b59b6;
+  outline-offset: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Button and link resets */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Removed scroll text animation */
+.animate-scroll-text {
+  display: none;
+}
+
+/* Page transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Pulse animation with delay */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  color: #9b59b6;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(155, 89, 182, 0.2);
+}
+
+/* Removed global transitions for cleaner performance */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .animate-scroll-text {
+    animation-duration: 15s;
+  }
+  
+  .neon-text {}
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Glass morphism effect for dark theme */
+.glass-dark {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(155, 89, 182, 0.2);
+}
+
+/* Removed float animation */
+.float-animation {}
+
+/* Custom utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Ensure smooth font rendering */
+body, input, textarea, button {
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent text selection on interactive elements */
+button, a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form elements */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: rgba(31, 41, 55, 0.5);
+  border: 1px solid rgba(155, 89, 182, 0.3);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #9b59b6;
+  box-shadow: 0 0 5px rgba(155, 89, 182, 0.2);
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* Removed glow animation */
+.glow-animation {}
